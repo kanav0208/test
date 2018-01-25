@@ -85,3 +85,12 @@
 0:0:0:0:0:0:0:1 - - [19/Jan/2018:15:41:45 +0900] "POST /WebProj2/InquiryAction.action HTTP/1.1" 200 916
 0:0:0:0:0:0:0:1 - - [19/Jan/2018:15:41:47 +0900] "GET /WebProj2/WelcomeAction HTTP/1.1" 200 841
 0:0:0:0:0:0:0:1 - - [19/Jan/2018:15:41:50 +0900] "GET /WebProj2/HelloStrutsAction HTTP/1.1" 200 146
+127.0.0.1 - - [19/Jan/2018:17:58:11 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:17:58:16 +0900] "GET /login/login.jsp HTTP/1.1" 200 689
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:17:58:19 +0900] "POST /login/loginAction.action;jsessionid=86B5E53A61F83CC14CC208C36D03E457 HTTP/1.1" 200 182
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:17:58:32 +0900] "POST /login/loginAction.action;jsessionid=86B5E53A61F83CC14CC208C36D03E457 HTTP/1.1" 200 182
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:17:59:04 +0900] "GET /WebProj2/indexjsp.jsp HTTP/1.1" 200 1887
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:17:59:09 +0900] "GET /WebProj2/WelcomeAction HTTP/1.1" 200 841
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:17:59:13 +0900] "GET /WebProj2/HelloStrutsAction HTTP/1.1" 200 146
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:17:59:16 +0900] "GET /WebProj2/TestAction.action;jsessionid=97C53D5422B84FA08C55D1CD3EC2F829?username=&password= HTTP/1.1" 200 131
+0:0:0:0:0:0:0:1 - - [19/Jan/2018:17:59:20 +0900] "POST /WebProj2/InquiryAction.action;jsessionid=97C53D5422B84FA08C55D1CD3EC2F829 HTTP/1.1" 200 916

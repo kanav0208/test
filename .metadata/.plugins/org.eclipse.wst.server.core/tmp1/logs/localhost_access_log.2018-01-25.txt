@@ -1,0 +1,9 @@
+127.0.0.1 - - [25/Jan/2018:13:17:05 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:13:17:09 +0900] "GET /WebProj4/index.jsp HTTP/1.1" 200 2282
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:13:17:12 +0900] "POST /WebProj4/InquiryAction.action;jsessionid=7A8678249736B2EEC68B385E0E79F9DE HTTP/1.1" 200 914
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:13:17:16 +0900] "POST /WebProj4/WelcomeAction.action;jsessionid=7A8678249736B2EEC68B385E0E79F9DE HTTP/1.1" 200 845
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:13:17:19 +0900] "POST /WebProj4/HelloStrutsAction.action;jsessionid=7A8678249736B2EEC68B385E0E79F9DE HTTP/1.1" 200 817
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:13:17:38 +0900] "GET /WebProj4/test.jsp HTTP/1.1" 200 291
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:13:18:01 +0900] "GET /WebProj4/welcome.jsp HTTP/1.1" 200 845
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:13:18:12 +0900] "GET /WebProj4/TestAction.action;jsessionid=7A8678249736B2EEC68B385E0E79F9DE?username=a&password=a HTTP/1.1" 200 330
+0:0:0:0:0:0:0:1 - - [25/Jan/2018:13:18:18 +0900] "POST /WebProj4/TestAction.action;jsessionid=7A8678249736B2EEC68B385E0E79F9DE HTTP/1.1" 200 369
