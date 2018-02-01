@@ -50,7 +50,6 @@ background-color: black;
 clear:both;
 }
 </style>
-
 </head>
 <body>
 
