@@ -2,4 +2,5 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.internousdev.login.util.DBConnector"/>
 <fullyQualifiedTypeName name="com.internous.webproj3.util.DBConnector"/>
+<fullyQualifiedTypeName name="java.sql.Array"/>
 </qualifiedTypeNameHistroy>
