@@ -20,6 +20,7 @@ margin:0;
 padding:0;
 line-height:1.6;
 letter-spacing:1px;
+font-family:Verdana,Helvetica,sans-serif;
 font-size:12px;
 color:#333;
 background:#fff;
@@ -118,8 +119,8 @@ clear:both;
 			</table>
 	</s:form>
 			<div>
-							<span>前画面に戻る場合は</span>
-							<a href='<s:url action="HomeAction" />'>こちらへ</a>
+							<p>前画面に戻る場合は<a href='<s:url action="GohomeAction" />'>こちらへ</a></p>
+							<p>マイページは<a href='<s:url action="MyPageAction" />'>こちらへ</a></p>
 			</div>
 	</div>
 </div>

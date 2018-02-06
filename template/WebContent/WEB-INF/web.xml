@@ -16,4 +16,7 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1"
 <filter-name>struts2</filter-name>
 <url-pattern>/*</url-pattern>
 </filter-mapping>
+<session-config>
+<session-timeout>1</session-timeout>
+</session-config>
 </web-app>

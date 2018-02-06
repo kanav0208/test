@@ -10,6 +10,8 @@
 <meta http-equiv="imagetoolbar" content="no" />
 <meta http-equiv="description" content=""/>
 <meta http-equiv="keywords" content=""/>
+<meta charset="utf-8">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1jquery.min.js"></script>
 
 <title>buyItemConfirm画面</title>
 <style type="text/css">
@@ -19,6 +21,7 @@ margin:0;
 padding:0;
 line-height:1.6;
 letter-spacing:1px;
+font-family:Verdana,Helvetica,sans-serif;
 font-size:12px;
 color:#333;
 background:#fff;
@@ -55,6 +58,12 @@ background-color:black;
 clear:both;
 }
 </style>
+<script type="text/javascript">
+function submitAction(url){
+	$('form').attr('action',url);
+	$('form').submit();
+}
+</script>
 </head>
 <body>
 <div id="header">
@@ -91,7 +100,8 @@ clear:both;
 								<td><s:property value="session.pay" /></td>
 						</tr>
 						<tr>
-								<td><s:submit value="完了" /></td>
+								<td><input type="button" value="戻る" onclick="submitAction('HomeAction')"/></td>
+								<td><input type="button" value="完了" onclick="submitAction('BuyItemConfirmAction')"/></td>
 						</tr>
 				</table>
 				</s:form>
