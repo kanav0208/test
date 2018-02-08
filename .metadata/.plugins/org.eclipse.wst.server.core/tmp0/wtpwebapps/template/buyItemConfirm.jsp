@@ -11,7 +11,8 @@
 <meta http-equiv="description" content=""/>
 <meta http-equiv="keywords" content=""/>
 <meta charset="utf-8">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
 <title>buyItemConfirm画面</title>
 <style type="text/css">
@@ -91,7 +92,7 @@ function submitAction(url){
 						<tr>
 							<td>購入個数</td>
 							<td>
-								<s:property value="session.stock" />
+								<s:property value="session.count" />
 									<span>個</span>
 							</td>
 						</tr>

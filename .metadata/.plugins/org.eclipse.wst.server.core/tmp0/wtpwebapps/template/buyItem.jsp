@@ -93,7 +93,7 @@ clear:both;
 						<span>在庫</span>
 					</td>
 					<td>
-						<select name="stock">
+						<select name="count">
 						<option value="1" selected="selected">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>

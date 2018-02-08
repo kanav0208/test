@@ -13,14 +13,13 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 	private String loginUserId;
 	private String loginPassword;
-	private String result;
 	public Map<String,Object> session;
 	private LoginDAO loginDAO = new LoginDAO();
 	private LoginDTO loginDTO = new LoginDTO();
 	private BuyItemDAO buyItemDAO = new BuyItemDAO();
 
 	public String execute() {
-		result = ERROR;
+		String result = ERROR;
 		loginDTO = loginDAO.getLoginUserInfo(loginUserId,loginPassword);
 		session.put("loginUser", loginDTO);
 
