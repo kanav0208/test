@@ -115,3 +115,10 @@
 0:0:0:0:0:0:0:1 - - [16/Feb/2018:15:26:33 +0900] "POST /ecsite/ItemSearchAction.action HTTP/1.1" 200 3440
 0:0:0:0:0:0:0:1 - - [16/Feb/2018:15:26:35 +0900] "POST /ecsite/ItemSearchAction.action HTTP/1.1" 200 6404
 0:0:0:0:0:0:0:1 - - [16/Feb/2018:15:26:43 +0900] "POST /ecsite/ItemSearchAction.action HTTP/1.1" 200 3437
+127.0.0.1 - - [16/Feb/2018:16:45:31 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [16/Feb/2018:16:45:32 +0900] "GET /ecsite/ HTTP/1.1" 404 1033
+0:0:0:0:0:0:0:1 - - [16/Feb/2018:16:45:59 +0900] "GET /ecsite/buyItem.jsp HTTP/1.1" 500 7266
+0:0:0:0:0:0:0:1 - - [16/Feb/2018:16:50:06 +0900] "GET /ecsite/buyItem.jsp HTTP/1.1" 500 4409
+0:0:0:0:0:0:0:1 - - [16/Feb/2018:16:51:35 +0900] "GET /ecsite/myPage.jsp HTTP/1.1" 404 1053
+0:0:0:0:0:0:0:1 - - [16/Feb/2018:16:55:38 +0900] "GET /ecsite/buyItem.jsp HTTP/1.1" 500 4409
+0:0:0:0:0:0:0:1 - - [16/Feb/2018:16:56:10 +0900] "GET /ecsite/ HTTP/1.1" 404 1033
