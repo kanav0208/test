@@ -24,7 +24,14 @@ public class UserCreateCompleteAction extends ActionSupport implements SessionAw
 
 		userCreateCompleteDAO.cerateUser(session.get("loginUserId").toString(),
 				session.get("loginPassword").toString(),
-				session.get("userName").toString());
+				session.get("userName").toString(),
+				session.get("userAddress").toString(),
+				session.get("userAddress1").toString(),
+				session.get("userAddress2").toString(),
+				session.get("userAddress3").toString(),
+				session.get("sex").toString(),
+				session.get("tell").toString());
+
 
 		String result = SUCCESS;
 

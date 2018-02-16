@@ -37,9 +37,23 @@ public class LoginDAO {
 				loginDTO.setLoginId(resultSet.getString("login_id"));
 				loginDTO.setLoginPassword(resultSet.getString("login_pass"));
 				loginDTO.setUserName(resultSet.getString("user_name"));
+				loginDTO.setUserAddress(resultSet.getString("user_address"));
+				loginDTO.setUserAddress1(resultSet.getString("user_address1"));
+				loginDTO.setUserAddress2(resultSet.getString("user_address2"));
+				loginDTO.setUserAddress3(resultSet.getString("user_address3"));
+				loginDTO.setUserSex(resultSet.getString("user_sex"));
+				loginDTO.setUserTell(resultSet.getString("user_tell"));
+				loginDTO.setUserNumber(resultSet.getString("id"));
+
 
 				if(!(resultSet.getString("login_id").equals(null))) {
 					loginDTO.setLoginFlg(true);
+				}
+
+				if(resultSet.getString("login_id").equals("taro") &&
+				resultSet.getString("login_pass").equals("123")){
+					loginDTO.setLoginMaster(true);
+
 				}
 			}
 

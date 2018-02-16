@@ -10,6 +10,12 @@ id int not null primary key auto_increment,
 login_id varchar(16) unique,
 login_pass varchar(16),
 user_name varchar(50),
+user_address varchar(50),
+user_address1 varchar(50),
+user_address2 varchar(50),
+user_address3 varchar(50),
+user_sex varchar(50),
+user_tell varchar(16),
 insert_date datetime,
 updated_date datetime
 );
@@ -40,4 +46,7 @@ delete_date datetime
 
 
 INSERT INTO item_info_transaction(item_name, item_price, item_stock) VALUES("NoteBook", 100, 50);
-INSERT INTO login_user_transaction(login_id, login_pass, user_name) VALUES("internous", "internous01", "test");
+
+INSERT INTO login_user_transaction(login_id, login_pass, user_name, user_address, user_address1, user_address2, user_address3, user_sex, user_tell)VALUES
+("kazuki", "456", "test","saitama","kita","nishi","100","男","04804804800"),
+("nitta","123","master","tokyo","minami","higashi","100","女","01234567890");

@@ -15,9 +15,9 @@ public class UserCreateCompleteDAO {
 
 	private DateUtil dateUtil = new DateUtil();
 
-	private String sql = "INSERT INTO login_user_transaction (login_id, login_pass, user_name, insert_date) VALUES(?, ? ,?, ?)";
+	private String sql = "INSERT INTO login_user_transaction (login_id, login_pass, user_name, insert_date, user_address, user_address1, user_address2, user_address3, user_sex, user_tell) VALUES(  ? , ? , ? , ? , ? , ? , ? , ? , ? , ?)";
 
-	public void cerateUser(String loginUserId, String loginUserPassword, String userName) throws SQLException {
+	public void cerateUser(String loginUserId, String loginUserPassword, String userName, String userAddress, String userAddress1, String userAddress2, String userAddress3, String userSex, String userTell) throws SQLException {
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -25,6 +25,12 @@ public class UserCreateCompleteDAO {
 			preparedStatement.setString(2, loginUserPassword);
 			preparedStatement.setString(3, userName);
 			preparedStatement.setString(4, dateUtil.getDate());
+			preparedStatement.setString(5, userAddress);
+			preparedStatement.setString(6, userAddress1);
+			preparedStatement.setString(7, userAddress2);
+			preparedStatement.setString(8, userAddress3);
+			preparedStatement.setString(9, userSex);
+			preparedStatement.setString(10, userTell);
 
 			preparedStatement.execute();
 

@@ -101,6 +101,30 @@
 							<s:property value="userName" escape="false" />
 						</td>
 					</tr>
+					<tr id="box">
+						<td>
+							<label>性別：</label>
+						</td>
+						<td>
+							<s:property value="sex" escape="false"/>
+						</td>
+					</tr>
+					<tr id="box">
+						<td>
+							<label>住所：</label>
+						</td>
+						<td>
+							<s:property value="session.userAddress" escape="false"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label>電話番号：</label>
+						</td>
+						<td>
+							<s:property value="tell" escape="false"/>
+						</td>
+					</tr>
 					<tr>
 						<td>
 							<s:submit value="完了" />
