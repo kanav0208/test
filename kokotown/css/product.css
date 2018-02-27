@@ -1,0 +1,97 @@
+@CHARSET "UTF-8";
+
+.logo{position:absolute:
+    top:0px;
+    left:20px;
+}
+
+body {
+background-image: url("../img/home.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: right bottom;
+}
+
+
+
+btn{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: rgba(3, 300, 244, 0.54);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    background: #f7f7f7;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.08);
+}
+.btn .fa {
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    vertical-align: middle;
+    left: 10px;
+    top: 9px;
+    border-radius: 50%;
+    font-size: 40px;
+    background-image: url("../img/cart.jpg");
+    background-size:contain;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #b5b5b5;
+  }
+
+.btn .fa:active{
+    background-image: -webkit-linear-gradient(#efefef 0%, #d6d6d6 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #d8d8d8;
+}
+.btn{position:absolute;
+    top:350px;
+    left:50px;
+
+}
+
+botan{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: rgba(3, 300, 244, 0.54);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    background: #f7f7f7;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.08);
+}
+.botan .bb{
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    vertical-align: middle;
+    left: 10px;
+    top: 9px;
+    border-radius: 50%;
+    font-size: 40px;
+    background-image: url("../img/kaimono.jpg");
+    background-size:contain;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #b5b5b5;
+  }
+
+.botan .bb:active{
+    background-image: -webkit-linear-gradient(#efefef 0%, #d6d6d6 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
+    border-bottom: solid 2px #d8d8d8;
+}
+.botan{position:absolute;
+    top:450px;
+    left:50px;
+
+}

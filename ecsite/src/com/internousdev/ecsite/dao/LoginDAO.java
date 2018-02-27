@@ -50,8 +50,8 @@ public class LoginDAO {
 					loginDTO.setLoginFlg(true);
 				}
 
-				if(resultSet.getString("login_id").equals("taro") &&
-				resultSet.getString("login_pass").equals("123")){
+				if(resultSet.getString("login_id").equals("kazuki") &&
+				resultSet.getString("login_pass").equals("111")){
 					loginDTO.setLoginMaster(true);
 
 				}

@@ -44,9 +44,27 @@ insert_date datetime,
 delete_date datetime
 );
 
+create table image (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255) NOT NULL, img LONGBLOB);
 
-INSERT INTO item_info_transaction(item_name, item_price, item_stock) VALUES("NoteBook", 100, 50);
+
+INSERT INTO item_info_transaction(item_name, item_price, item_stock) VALUES
+("Saber", 100, 50),
+("Archer", 80, 99),
+("Lancer", 80, 99),
+("Rider", 80, 99),
+("Assassin", 80, 99),
+("Caster",80, 99),
+("Berserker",5000, 50),
+("Ruler",10000, 20),
+("Avenger",50000, 10),
+("Shielder",100000, 1);
+
 
 INSERT INTO login_user_transaction(login_id, login_pass, user_name, user_address, user_address1, user_address2, user_address3, user_sex, user_tell)VALUES
-("kazuki", "456", "test","saitama","kita","nishi","100","男","04804804800"),
-("nitta","123","master","tokyo","minami","higashi","100","女","01234567890");
+("nitta", "456", "test","saitama","kita","nishi","100","男","04804804800"),
+("kazuki","111","master","kawa","guchi","aoki","100","男","09876543211");
+
+CREATE TABLE contact(
+name varchar(255)COMMENT "お問い合わせ名前",
+qtype varchar(255)COMMENT "お問い合わせ種類",
+content varchar(255))COMMENT "お問い合わせ内容";

@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+.admin{
+	position:absolute;
+	top:300px;
+	right:200px;
+}
+#adminImg{
+	height:300px;
+	width:300px;
+}
+.destination{
+	height:150px;
+}
+.destination:hover{
+	background-color:bisque;
+}

@@ -59,19 +59,19 @@ body {
 }
 	#footer {
 	clear:both;
-	width: 1200px;
-	height:50px;
+	width: 100px;
+	height:80px;
 	margin:0 auto;
 	text-align:center;
 }
 .footer_menu{
-	width:137px;
-	height:30px;
+	width:100px;
+	height:80px;
 	margin:0 auto;
 	font-size:12px;
 }
 .footer_menu_1 a{
-	float:left;
+	float:right;
 }
 
 .footer_menu_2{

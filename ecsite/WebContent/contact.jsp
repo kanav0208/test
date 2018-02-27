@@ -1,0 +1,115 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+       <%@ taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta charset="utf-8">
+<title>お問い合わせ画面</title>
+<style type="text/css">
+	/* ========TAG LAYOUT======== */
+		body {
+		   margin:0;
+		   padding:0;
+		   line-height:1.6;
+		   letter-spacing:1px;
+		   font-family:Verdana, Helvetica, sans-serif;
+		   font-size:12px;
+		   color:#333;
+		   background:#fff;
+		}
+
+		table {
+			text-align:center;
+			margin:0 auto;
+		}
+
+	/* ========ID LAYOUT======== */
+		#top {
+		   width:780px;
+		   margin:30px auto;
+		   border:1px solid #333;
+		}
+
+		#header {
+		   width: 100%;
+		   height: 80px;
+		   background-color: black;
+		}
+
+		#main {
+		   width: 100%;
+		   height: 1100px;
+		   text-align: center;
+		}
+
+		#footer {
+			width: 100%;
+			height: 80px;
+			background-color: black;
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div id="top">
+		</div>
+	</div>
+			<p>Contact</p>
+	<!--メインここから -->
+	<div id="main">
+		<div class="pageback">
+			<a href='<s:url action="GoHomeAction"/>'>TOP</a> &nbsp;>&nbsp; <a>お問い合わせ</a>
+		</div>
+		<h2 class="title">お問い合わせ</h2>
+		<div class="menu">
+			電話でのお問い合わせはこちらにお電話ください。 <br> 000-114-114 <br>
+		</div>
+		<br>
+		<div class="menu_1">
+			それ以外でのお問い合わせは以下に書き込み登録してください。 <br> <br>
+			<s:form method="post" action="ContactCompleteAction" theme="simple"
+				id="contactForm">
+				<div class="menu_2">
+					名前:<br> <input type="text" name="name"
+						class="validate[required]" /> <br> <br> お問い合わせの種類:<br>
+					<select name="qtype">
+						<option value="kurasu">クラスについて</option>
+						<option value="aisho">相性について</option>
+						<option value="kakuritu">確立について</option>
+					</select> <br> <br> お問い合わせ内容:
+					<s:textarea name="content" rows="6" cols="30"
+						class="validate[required]" />
+				</div>
+				<br>
+				<div class="member_btn">
+					<button type="submit" class="">登録</button>
+				</div>
+			</s:form>
+		</div>
+	</div>
+	<!--メインここまで -->
+
+	<!--フッターここから-->
+	<div id="footer">
+		<p>Copyright© internousdev All Rights Reserved.</p>
+		<div class="footer_menu">
+			<div class="footer_menu_1">
+				<s:form method="post">
+					<a href="ContactAction">お問い合わせ</a>
+				</s:form>
+			</div>
+			<div class="footer_menu_2">
+				&nbsp;&nbsp;&nbsp;&nbsp;<a
+					href="https://www.google.co.jp/maps/place/インターノウス">位置情報</a>
+			</div>
+		</div>
+	</div>

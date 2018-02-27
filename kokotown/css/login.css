@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+#main{
+	margin-left:150px;
+}
+
+table{
+    border-spacing : 10px 4px;
+    background:#ffbfa;
+    text-align:left;
+    margin-top:10px;
+    height:100px;
+    width:250px;
+}

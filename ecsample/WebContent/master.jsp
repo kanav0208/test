@@ -109,11 +109,10 @@
 							</td>
 						</tr>
 					</s:iterator>
-						<tr>
-							<td>
-								<s:submit value="追加"/>
-							</td>
-						</tr>
+					<tr>
+					<td><s:submit value="選択"/></td>
+				</tr>
+
 				</table>
 			</s:form>
 

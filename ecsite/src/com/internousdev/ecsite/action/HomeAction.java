@@ -1,5 +1,6 @@
 package com.internousdev.ecsite.action;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -7,9 +8,12 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.internousdev.ecsite.dao.BuyItemDAO;
 import com.internousdev.ecsite.dto.BuyItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
+
 public class HomeAction extends ActionSupport implements SessionAware {
 
 	public Map<String, Object> session;
+	private BuyItemDAO buyItemDAO=new BuyItemDAO();
+	private List<BuyItemDTO> buyItemDTOList;
 
 	/**
 	 * ログインボタン押下時に実行
@@ -21,15 +25,28 @@ public class HomeAction extends ActionSupport implements SessionAware {
 		String result = "login";
 		if (session.containsKey("id")) {
 			// アイテム情報を取得
-			BuyItemDAO buyItemDAO = new BuyItemDAO();
-			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
-			session.put("id", buyItemDTO.getId());
-			session.put("buyItem_name", buyItemDTO.getItemName());
-			session.put("buyItem_price", buyItemDTO.getItemPrice());
+
+			buyItemDTOList=buyItemDAO.getBuyItemInfo();
+			session.put("buyItemDTOList", buyItemDTOList);
 
 			result = SUCCESS;
 		}
+
+		if(session.containsKey("masterId")){
+			buyItemDTOList=buyItemDAO.getBuyItemInfo();
+			session.put("buyItemDTOList", buyItemDTOList);
+			result = "master";
+
+		}
+
 		return result;
+	}
+
+	public List<BuyItemDTO> getBuyItemDTOList(){
+		return buyItemDTOList;
+	}
+	public void setBuyItemDTOList(List<BuyItemDTO> buyItemDTOList){
+		this.buyItemDTOList=buyItemDTOList;
 	}
 
 	@Override

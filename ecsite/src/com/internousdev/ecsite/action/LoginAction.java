@@ -1,5 +1,6 @@
 package com.internousdev.ecsite.action;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -51,7 +52,9 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	/**
 	 * アイテム情報を取得
 	 */
-	private BuyItemDAO buyItemDAO = new BuyItemDAO();
+	private BuyItemDAO buyItemDAO=new BuyItemDAO();
+	private BuyItemDTO buyItemDTO=new BuyItemDTO();
+	private List<BuyItemDTO> buyItemDTOList;
 
 	/**
 	 * 実行メソッド
@@ -65,19 +68,37 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 		session.put("loginUser", loginDTO);
 
+
 		// ログイン情報を比較
-		if(((LoginDTO) session.get("loginUser")).getLoginFlg()) {
-			result = SUCCESS;
+		if(((LoginDTO) session.get("loginUser")).getLoginMaster()){
+			buyItemDTOList=buyItemDAO.getBuyItemInfo();
+			session.put("buyItemDTOList", buyItemDTOList);
+			session.put("masterId",loginUserId);
+			result = "master";
 
-			// アイテム情報を取得
-			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
-			session.put("login_user_id",	loginDTO.getLoginId());
-			session.put("id", buyItemDTO.getId());
-			session.put("buyItem_name", buyItemDTO.getItemName());
-			session.put("buyItem_price", buyItemDTO.getItemPrice());
-
-			return result;
 		}
+
+		if(result != "master"){
+			if(((LoginDTO) session.get("loginUser")).getLoginFlg()) {
+				result = SUCCESS;
+
+				// アイテム情報を取得
+
+				buyItemDTOList=buyItemDAO.getBuyItemInfo();
+
+				// BuyItemActionで利用したいから"buyItemDTOList"という鍵の名前でbuyItemDTOListのデータを保管する。
+				session.put("buyItemDTOList", buyItemDTOList);
+				session.put("id", buyItemDTO.getId());
+				session.put("login_user_id",loginDTO.getLoginId());
+				session.put("userName", loginDTO.getUserName());
+				session.put("userAddress", loginDTO.getUserAddress());
+
+
+
+			}
+		}
+
+
 
 		return result;
 	}
@@ -96,6 +117,13 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 	public void setLoginPassword(String loginPassword) {
 		this.loginPassword = loginPassword;
+	}
+
+	public List<BuyItemDTO> getBuyItemDTOList(){
+		return buyItemDTOList;
+	}
+	public void setBuyItemDTOList(List<BuyItemDTO> buyItemDTOList){
+		this.buyItemDTOList=buyItemDTOList;
 	}
 
 	@Override

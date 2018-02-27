@@ -1,0 +1,49 @@
+	/**
+	 * getBoolean用テンプレート
+	 *
+	 * BooleanMethod
+	 * testDTO
+	 *
+	 */
+
+	@Test
+	public void testIsBooleanMethod1(){
+		testDTO dto = new testDTO();
+        boolean expected = true;
+        dto.setBooleanMethod(expected);
+        boolean actual = dto.isBooleanMethod();
+        assertEquals(expected, actual);
+	}
+
+	@Test
+	public void testIsBooleanMethod2(){
+		testDTO dto = new testDTO();
+		boolean expected = false;
+        dto.setBooleanMethod(expected);
+        boolean actual = dto.isBooleanMethod();
+        assertEquals(expected, actual);
+	}
+
+
+	/**
+	 * setBoolean用テンプレート
+	 *
+	 */
+
+	@Test
+	public void testSetBooleanMethod1(){
+		testDTO dto = new testDTO();
+        boolean expected = true;
+        dto.setBooleanMethod(expected);
+        boolean actual = dto.isBooleanMethod();
+        assertEquals(expected, actual);
+	}
+
+	@Test
+	public void testSetBooleanMethod2(){
+		testDTO dto = new testDTO();
+		boolean expected = false;
+        dto.setBooleanMethod(expected);
+        boolean actual = dto.isBooleanMethod();
+        assertEquals(expected, actual);
+	}

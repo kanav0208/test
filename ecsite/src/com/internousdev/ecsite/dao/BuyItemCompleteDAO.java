@@ -27,18 +27,29 @@ public class BuyItemCompleteDAO {
 	 * @param pay
 	 * @throws SQLException
 	 */
-	public void buyItemeInfo(String item_transaction_id, String user_master_id, String total_price, String total_count, String pay) throws SQLException {
+	public void buyItemeInfo(int item_transaction_id, String user_master_id, String total_price, int total_count, String pay, int item_stock) throws SQLException {
 
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
-			preparedStatement.setString(1, item_transaction_id);
+			preparedStatement.setInt(1, item_transaction_id);
 			preparedStatement.setString(2, total_price);
-			preparedStatement.setString(3, total_count);
+			preparedStatement.setInt(3, total_count);
 			preparedStatement.setString(4, user_master_id);
 			preparedStatement.setString(5, pay);
 			preparedStatement.setString(6, dateUtil.getDate());
 
-			preparedStatement.execute();
+
+
+			int checkCount =preparedStatement.executeUpdate();
+			if(checkCount > 0){
+				String sql2="UPDATE item_info_transaction SET item_stock = ? WHERE id=?";
+
+					PreparedStatement ps=connection.prepareStatement(sql2);
+					ps.setInt(1, item_stock);
+					ps.setInt(2, item_transaction_id);
+					ps.executeUpdate();
+
+			}
 
 		} catch(Exception e) {
 			e.printStackTrace();

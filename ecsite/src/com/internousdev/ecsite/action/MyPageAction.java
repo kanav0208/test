@@ -3,25 +3,27 @@ package com.internousdev.ecsite.action;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.ecsite.dao.MyPageDAO;
+import com.internousdev.ecsite.dto.BuyItemDTO;
 import com.internousdev.ecsite.dto.MyPageDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class MyPageAction extends ActionSupport implements SessionAware{
+
+
+
+
 
 	/**
 	 * ログイン情報を格納
 	 */
 	public Map<String, Object> session;
 
-	/**
-	 * マイページ情報取得DAO
-	 */
-	private MyPageDAO myPageDAO = new MyPageDAO();
 
 	/**
 	 * マイページ情報格納DTO
@@ -35,30 +37,52 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 
 	private String message;
 
+	private List<BuyItemDTO> buyItemDTOList;
+
+
 	/**
 	 * 商品履歴取得メソッド
 	 *
 	 * @author internous
 	 */
-	public String execute() throws SQLException {
 
+	public String execute() throws SQLException {
+		@SuppressWarnings("unchecked")
+		List<BuyItemDTO> buyItemDTOList=(List<BuyItemDTO>) session.get("list");
 		if (!session.containsKey("id")) {
 			return ERROR;
 		}
 
 		// 商品履歴を削除しない場合
 		if(deleteFlg == null) {
-			String item_transaction_id = session.get("id").toString();
+
+			if(buyItemDTOList != null){
+			for(int i=0; i<buyItemDTOList.size(); i++){
+
 			String user_master_id = session.get("login_user_id").toString();
 
-			myPageList = myPageDAO.getMyPageUserInfo(item_transaction_id, user_master_id);
+			MyPageDAO myPageDAO = new MyPageDAO();
+
+
+			myPageList= myPageDAO.getMyPageUserInfo(user_master_id);
+
+			}
+
+
+			}else{
+				String user_master_id = session.get("login_user_id").toString();
+				MyPageDAO myPageDAO = new MyPageDAO();
+				myPageList = myPageDAO.getMyPageUserInfo(user_master_id);
+			}
+
+
 
 			Iterator<MyPageDTO> iterator = myPageList.iterator();
 			if (!(iterator.hasNext())) {
 				myPageList = null;
 			}
 		// 商品履歴を削除する場合
-		} else if(deleteFlg.equals("1")) {
+		} else{
 			delete();
 		}
 
@@ -73,17 +97,21 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 	 */
 	public void delete() throws SQLException {
 
-		String item_transaction_id = session.get("id").toString();
+
 		String user_master_id = session.get("login_user_id").toString();
 
-		int res = myPageDAO.buyItemHistoryDelete(item_transaction_id, user_master_id);
+		MyPageDAO myPageDAO = new MyPageDAO();
+		int res = myPageDAO.buyItemHistoryDelete(user_master_id);
 
 		if(res > 0) {
+
 			myPageList = null;
 			setMessage("商品情報を正しく削除しました。");
 		} else if(res == 0) {
 			setMessage("商品情報の削除に失敗しました。");
 		}
+
+
 	}
 
 
@@ -94,6 +122,13 @@ public class MyPageAction extends ActionSupport implements SessionAware{
 
 	public void setDeleteFlg(String deleteFlg) {
 		this.deleteFlg = deleteFlg;
+	}
+
+	public List<BuyItemDTO> getBuyItemDTOList(){
+		return buyItemDTOList;
+	}
+	public void setBuyItemDTOList(List<BuyItemDTO> buyItemDTOList){
+		this.buyItemDTOList=buyItemDTOList;
 	}
 
 	@Override

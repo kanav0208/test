@@ -24,7 +24,7 @@ public class GoItemUpdateAction extends ActionSupport implements SessionAware {
 		return result;
 	}
 
-	public List<BuyItemDTO> getBuyItemDTOList(){
+	public List<BuyItemDTO> getBuyItemlist(){
 		return buyItemDTOList;
 	}
 

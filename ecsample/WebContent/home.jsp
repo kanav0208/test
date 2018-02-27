@@ -57,6 +57,7 @@
 		}
 
 		#text-center {
+		float:left;
 			display: inline-block;
 			text-align: center;
 		}
