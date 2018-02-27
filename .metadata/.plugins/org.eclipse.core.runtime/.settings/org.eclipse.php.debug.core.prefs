@@ -1,9 +1,12 @@
-#Tue Jun 01 20:47:55 JST 2010
-org.eclipse.php.debug.coreinstalledPHPInis=C:/pleiades/xampp/php/php.ini
+eclipse.preferences.version=1
+org.eclipse.php.debug.core.xdebugDebuggerSettingsProvider=<settings><proxyEnable>false</proxyEnable><clientPort>9000</clientPort><ownerId>php-exe-c9cb90d4-9d9e-479b-b3ac-3dc9297b1f10</ownerId><proxyIdeKey>ECLIPSE_DBGP_xxx</proxyIdeKey><proxyAddress></proxyAddress></settings>\u0005<settings><proxyEnable>false</proxyEnable><clientPort>9000</clientPort><ownerId>php-server-a7f2c8d4-909d-4af6-906a-4864073b7bf7</ownerId><proxyIdeKey>ECLIPSE_DBGP_xxx</proxyIdeKey><proxyAddress></proxyAddress></settings>
+org.eclipse.php.debug.core.zendDebuggerSettingsProvider=<settings><clientPort>10137</clientPort><ownerId>php-exe-c9cb90d4-9d9e-479b-b3ac-3dc9297b1f10</ownerId></settings>\u0005<settings><clientIp>192.168.0.2,127.0.0.1</clientIp><clientPort>10137</clientPort><ownerId>php-server-a7f2c8d4-909d-4af6-906a-4864073b7bf7</ownerId><responseTimeout>60000</responseTimeout></settings>
 org.eclipse.php.debug.coreinstalledPHPDebuggers=org.eclipse.php.debug.core.xdebugDebugger
 org.eclipse.php.debug.coreinstalledPHPDefaults=org.eclipse.php.debug.core.xdebugDebugger\=PHP 5.3.1 (CLI)
-eclipse.preferences.version=1
-org.eclipse.php.debug.coreinstalledPHPLocations=C:/pleiades/xampp/php/php.exe
-org.eclipse.php.debug.corephp_versions=null
+org.eclipse.php.debug.coreinstalledPHPInis=C\:\\pleiades\\xampp\\php\\php.ini
+org.eclipse.php.debug.coreinstalledPHPLoadIniDefaults=false
+org.eclipse.php.debug.coreinstalledPHPLocations=C\:\\pleiades\\xampp\\php\\php.exe
 org.eclipse.php.debug.coreinstalledPHPNames=PHP 5.3.1 (CLI)
+org.eclipse.php.debug.coreinstalledPHPUniqueIds=php-exe-c9cb90d4-9d9e-479b-b3ac-3dc9297b1f10
 org.eclipse.php.debug.corephp_debugger_id=org.eclipse.php.debug.core.xdebugDebugger
+org.eclipse.php.debug.corephp_versions=null

@@ -1,7 +1,11 @@
 drop database if exists ecsite;
 
 create database if not exists ecsite_tsuchida;
+<<<<<<< HEAD
 use ecsite_nitta;
+=======
+use ecsite_tsuchida;
+>>>>>>> 6a919f57b0748c1a5b0099fe46d101c905bd7fb8
 
 drop table if exists login_user_transaction;
 
