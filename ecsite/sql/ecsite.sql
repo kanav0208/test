@@ -27,6 +27,7 @@ id int not null primary key auto_increment,
 item_name varchar(30),
 item_price int,
 item_stock int,
+image_file_name varchar(255),
 insert_date datetime,
 update_date datetime
 );
@@ -44,20 +45,17 @@ insert_date datetime,
 delete_date datetime
 );
 
-create table image (id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(255) NOT NULL, img LONGBLOB);
-
-
-INSERT INTO item_info_transaction(item_name, item_price, item_stock) VALUES
-("Saber", 100, 50),
-("Archer", 80, 99),
-("Lancer", 80, 99),
-("Rider", 80, 99),
-("Assassin", 80, 99),
-("Caster",80, 99),
-("Berserker",5000, 50),
-("Ruler",10000, 20),
-("Avenger",50000, 10),
-("Shielder",100000, 1);
+INSERT INTO item_info_transaction(item_name, item_price, item_stock, image_file_name) VALUES
+("Saber", 100, 50, "./image/ken.jpg"),
+("Archer", 80, 99, "./image/yumi.jpg"),
+("Lancer", 80, 99, "./image/yari.jpg"),
+("Rider", 80, 99, "./image/uma.jpg"),
+("Assassin", 80, 99, "./image/asasin.jpg"),
+("Caster",80, 99, "./image/tue.jpg"),
+("Berserker",5000, 50, "./image/basaka.jpg"),
+("Ruler",10000, 20, "./image/seijo.jpg"),
+("Avenger",50000, 10, "./image/ave.jpg"),
+("Shielder",100000, 1, "./image/tate.jpg");
 
 
 INSERT INTO login_user_transaction(login_id, login_pass, user_name, user_address, user_address1, user_address2, user_address3, user_sex, user_tell)VALUES

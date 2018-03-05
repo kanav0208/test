@@ -28,12 +28,14 @@ public class ItemSearchDAO {
 			while(resultSet.next()) {
 				String itemName = resultSet.getString("item_name");
 				String itemPrice = resultSet.getString("item_price");
+				String image_file_name = resultSet.getString("image_file_name");
 
 				if(itemName.matches(".*" + searchWord + ".*") || itemPrice.matches(".*" + searchWord + ".*")) {
 					BuyItemDTO dto = new BuyItemDTO();
 					dto.setId(resultSet.getInt("id"));
 					dto.setItemName(itemName);
 					dto.setItemPrice(itemPrice);
+					dto.setImage_file_name(image_file_name);
 					dto.setItem_stock(resultSet.getInt("item_stock"));
 					searchList.add(dto);
 				}

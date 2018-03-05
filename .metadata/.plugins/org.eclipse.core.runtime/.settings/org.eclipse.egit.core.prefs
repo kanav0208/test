@@ -1,3 +1,5 @@
-GitRepositoriesView.GitDirectories=C\:\\Users\\MASTER\\Desktop\\work-space-nitta\\test\\.git;
+GitRepositoriesView.GitDirectories=C\:\\Users\\internousdev\\Desktop\\workspace\\workspace-nitta\\test\\.git;C\:\\Users\\internousdev\\Desktop\\workspace\\workspace-nitta\\test\\cherry\\.git;
 GitRepositoriesView.GitDirectories.relative=.git;
+RepositorySearchDialogDeepSearch=false
+RepositorySearchDialogSearchPath=C\:\\Users\\internousdev\\Desktop\\workspace\\workspace-nitta
 eclipse.preferences.version=1

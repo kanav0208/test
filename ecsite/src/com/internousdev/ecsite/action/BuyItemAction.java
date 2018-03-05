@@ -50,6 +50,9 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 			String buyItemName=list.get(i).getItemName();
 			session.put("itemName",buyItemName);
 
+			String buyImage_file_name=list.get(i).getImage_file_name();
+			session.put("image_file_name",buyImage_file_name);
+
 			String buyItemPrice=list.get(i).getItemPrice();
 			session.put("itemPrice",buyItemPrice);
 
@@ -69,6 +72,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 
 			buyItemDTO.setId((int) session.get("id"));
 			buyItemDTO.setItemName(session.get("itemName").toString());
+			buyItemDTO.setImage_file_name(session.get("image_file_name").toString());
 			buyItemDTO.setItemPrice(session.get("itemPrice").toString());
 			buyItemDTO.setCount(intCount);
 			buyItemDTO.setItem_stock(item_stock);

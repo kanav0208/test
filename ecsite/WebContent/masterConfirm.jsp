@@ -88,6 +88,13 @@
 								<s:property value="itemName"/>
 							</td>
 						</tr>
+
+						<tr>
+							<td>
+						<img src='<s:property value="image_file_name"/>'/>
+							</td>
+						</tr>
+
 						<tr>
 							<td>
 								追加個数

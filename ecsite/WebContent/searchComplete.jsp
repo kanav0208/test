@@ -79,7 +79,11 @@
 					</td>
 				</tr>
 
-
+				<tr>
+					<td>
+						<img src='<s:property value="image_file_name"/>'/>
+					</td>
+				</tr>
 
 				<tr>
 					<td>

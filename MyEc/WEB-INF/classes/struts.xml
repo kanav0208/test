@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true"/>
+	<package name="com.internousdev.myec.action" extends="struts-default">
+
+	<!-- ホームに戻るアクション -->
+	<!-- GoHomeAction -->
+	<action name="GoHomeAction" class="com.internousdev.myec.action.GoHomeAction" method="execute">
+		<result name="success">home.jsp</result>
+		<result name="master">master.jsp</result>
+	</action>
+
+	<!-- ログイン認証とログアウト -->
+	<!-- GoLoginAction -->
+	<action name="GoLoginAction" class="com.internousdev.myec.action.GoLoginAction" method="execute">
+		<result name="success">login.jsp</result>
+	</action>
+
+	<!-- LoginAction -->
+	<action name="LoginAction" class="com.internousdev.myec.action.LoginAction" method="execute">
+		<result name="master">master.jsp</result>
+		<result name="success">buyItem.jsp</result>
+		<result name="alreadyLogged">alreadyLogged.jsp</result>
+		<result name="error">loginError.jsp</result>
+	</action>
+
+	<!-- LogoutAction -->
+	<action name="LogoutAction" class="com.internousdev.myec.action.LogoutAction" method="execute">
+		<result name="success">logout.jsp</result>
+	</action>
+
+
+	<!-- 新規ユーザー登録 -->
+	<!-- UserCreateAction -->
+	<action name="UserCreateAction" class="com.internousdev.myec.action.UserCreateAction" method="execute">
+		<result name="success">userCreate.jsp</result>
+	</action>
+
+	<!-- UserCreateConfirmAction -->
+	<action name="UserCreateConfirmAction" class="com.internousdev.myec.action.UserCreateConfirmAction" method="execute">
+		<result name="success">userCreateConfirm.jsp</result>
+		<result name="error">userCreate.jsp</result>
+	</action>
+
+	<!-- UserCreateCompleteAction -->
+	<action name="UserCreateCompleteAction" class="com.internousdev.myec.action.UserCreateCompleteAction" method="execute">
+		<result name="success">userCreateComplete.jsp</result>
+	</action>
+
+
+	<!-- マイページ関係 -->
+	<!-- MyPageLoginAction -->
+	<action name="MyPageLoginAction" class="com.internousdev.myec.action.MyPageLoginAction" method="execute">
+		<result name="success">myPage.jsp</result>
+		<result name="error">myPageLoginError.jsp</result>
+		<result name="master">master.jsp</result>
+	</action>
+
+	<!-- MyPageAction -->
+	<action name="MyPageAction" class="com.internousdev.myec.action.MyPageAction" method="execute">
+		<result name="success">myPage.jsp</result>
+		<result name="error">myPageLogin.jsp</result>
+		<result name="master">master.jsp</result>
+	</action>
+
+	<!-- ユーザー情報の更新 -->
+	<!-- GoUserUpdateAction -->
+	<action name="GoUserUpdateAction" class="com.internousdev.myec.action.GoUserUpdateAction" method="execute">
+		<result name="success">userUpdate.jsp</result>
+	</action>
+
+	<!-- UserUpdateAction -->
+	<action name="UserUpdateAction" class="com.internousdev.myec.action.UserUpdateAction" method="execute">
+		<result name="success">userUpdateConfirm.jsp</result>
+		<result name="error">userUpdate.jsp</result>
+	</action>
+
+	<!-- UserUpdateConfirmAction -->
+	<action name="UserUpdateConfirmAction" class="com.internousdev.myec.action.UserUpdateConfirmAction" method="execute">
+		<result name="success">userUpdateComplete.jsp</result>
+		<result name="error">userUpdate.jsp</result>
+	</action>
+
+	<!-- 退会手続き -->
+	<!-- GoUserDeleteAction -->
+	<action name="GoUserDeleteAction" class="com.internousdev.myec.action.GoUserDeleteAction" method="execute">
+		<result name="success">userDelete.jsp</result>
+	</action>
+
+	<!-- UserDeleteAction -->
+	<action name="UserDeleteAction" class="com.internousdev.myec.action.UserDeleteAction" method="execute">
+		<result name="success">userDeleteComplete.jsp</result>
+	</action>
+
+
+	<!-- 商品の購入 -->
+	<!-- ProductPageAction -->
+		<action name="ProductPageAction" class="com.internousdev.myec.action.ProductPageAction" method="execute">
+		<result name="success">buyItem.jsp</result>
+		<result name="master">buyItem.jsp</result>
+		<result name="error">buyItemNotLogin.jsp</result>
+	</action>
+
+	<!-- BuyItemAction -->
+	<action name="BuyItemAction" class="com.internousdev.myec.action.BuyItemAction" method="execute">
+		<result name="success">buyItemConfirm.jsp</result>
+		<result name="error">buyItem.jsp</result>
+	</action>
+
+	<!-- BuyItemConfirmAction -->
+	<action name="BuyItemConfirmAction" class="com.internousdev.myec.action.BuyItemConfirmAction" method="execute">
+		<result name="success">buyItemComplete.jsp</result>
+		<result name="error">buyItem.jsp</result>
+	</action>
+
+
+	<!-- 商品の検索とカテゴリソート -->
+	<!-- CategorySearchAction -->
+	<action name="CategorySearchAction" class="com.internousdev.myec.action.CategorySearchAction" method="execute">
+		<result name="success">buyItem.jsp</result>
+		<result name="error">buyItemNotLogin.jsp</result>
+	</action>
+
+	<!-- SearchAction -->
+	<action name="SearchAction" class="com.internousdev.myec.action.SearchAction" method="execute">
+		<result name="success">searchComplete.jsp</result>
+		<result name="error">buyItem.jsp</result>
+		<result name="logoffSuccess">searchCompleteNotLogin.jsp</result>
+		<result name="logoffError">buyItemNotLogin.jsp</result>
+	</action>
+
+
+	<!-- 問い合わせ -->
+	<action name="InquiryAction" class="com.internousdev.myec.action.InquiryAction" method="execute">
+		<result name="success">inquiry.jsp</result>
+		<result name="master">masterInquiry.jsp</result>
+	</action>
+
+	<!-- InquiryConfirmAction -->
+	<action name="InquiryConfirmAction" class="com.internousdev.myec.action.InquiryConfirmAction" method="execute">
+		<result name="success">inquiryConfirm.jsp</result>
+		<result name="error">inquiry.jsp</result>
+	</action>
+
+	<!-- InquiryCompleteAction -->
+	<action name="InquiryCompleteAction" class="com.internousdev.myec.action.InquiryCompleteAction" method="execute">
+		<result name="success">inquiryComplete.jsp</result>
+		<result name="error">inquiry.jsp</result>
+	</action>
+
+
+	<!-- 管理者アクション -->
+	<!-- GoMasterPageAction -->
+	<action name="GoMasterPageAction" class="com.internousdev.myec.action.GoMasterPageAction" method="execute">
+		<result name="success">master.jsp</result>
+	</action>
+
+
+	<!-- 新商品の追加 -->
+	<!-- ItemInsertAction -->
+	<action name="ItemInsertAction" class="com.internousdev.myec.action.ItemInsertAction" method="execute">
+		<result name="success">itemInsertComplete.jsp</result>
+		<result name="error">itemInsert.jsp</result>
+	</action>
+
+	<!-- GoItemInsertAction -->
+	<action name="GoItemInsertAction" class="com.internousdev.myec.action.GoItemInsertAction" method="execute">
+		<result name="success">itemInsert.jsp</result>
+	</action>
+
+
+	<!-- 商品在庫の追加 -->
+	<!-- GoItemInventoryAction -->
+	<action name="GoItemInventoryAction" class="com.internousdev.myec.action.GoItemInventoryAction" method="execute">
+		<result name="success">itemInventoryControl.jsp</result>
+	</action>
+
+	<!-- ItemInventoryControlAction -->
+	<action name="ItemInventoryControlAction" class="com.internousdev.myec.action.ItemInventoryControlAction" method="execute">
+		<result name="success">itemInventoryConfirm.jsp</result>
+	</action>
+
+	<!-- ItemInventoryConfirmAction -->
+	<action name="ItemInventoryConfirmAction" class="com.internousdev.myec.action.ItemInventoryConfirmAction" method="execute">
+		<result name="success">itemInventoryComplete.jsp</result>
+	</action>
+
+
+	<!-- 商品の削除 -->
+	<!-- GoItemDeleteAction -->
+	<action name="GoItemDeleteAction" class="com.internousdev.myec.action.GoItemDeleteAction" method="execute">
+		<result name="success">itemDelete.jsp</result>
+	</action>
+
+	<!-- ItemDeleteAction -->
+	<action name="ItemDeleteAction" class="com.internousdev.myec.action.ItemDeleteAction" method="execute">
+		<result name="success">itemDeleteConfirm.jsp</result>
+	</action>
+
+	<!-- ItemDeleteConfirmAction -->
+	<action name="ItemDeleteConfirmAction" class="com.internousdev.myec.action.ItemDeleteConfirmAction" method="execute">
+		<result name="success">itemDeleteComplete.jsp</result>
+	</action>
+
+	<!-- 問合せの削除 -->
+	<!-- InquiryAllDeleteAction -->
+	<action name="InquiryAllDeleteAction" class="com.internousdev.myec.action.InquiryAllDeleteAction" method="execute">
+		<result name="success">masterInquiry.jsp</result>
+	</action>
+
+
+	</package>
+</struts>

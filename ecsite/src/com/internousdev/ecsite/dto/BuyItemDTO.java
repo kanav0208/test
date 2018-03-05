@@ -18,6 +18,8 @@ public class BuyItemDTO {
 
 	public int total_count;
 
+	public String image_file_name;
+
 	public String getItemName() {
 		return itemName;
 	}
@@ -77,6 +79,16 @@ public class BuyItemDTO {
 	public void setTotal_count(int total_count){
 		this.total_count=total_count;
 	}
-}
+
+	public String getImage_file_name(){
+		return image_file_name;
+	}
+
+	public void setImage_file_name(String image_file_name){
+		this.image_file_name=image_file_name;
+	}
+
+	}
+
 
 

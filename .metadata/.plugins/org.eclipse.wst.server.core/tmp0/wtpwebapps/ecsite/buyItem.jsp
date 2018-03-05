@@ -51,80 +51,21 @@
 
 		#main {
 		   width: 100%;
-		   height: 2300px;
+		   height: 3000px;
 		   text-align: center;
 		}
 
 		#footer {
-			width: 100%;
+    	   width: 100%;
 			height: 80px;
 			background-color: black;
 			clear:both;
 		}
 
-		.buttons{
-
-    display: block;
-    position: absolute;
-
-    bottom: 20px;
-
-    width:1%;
-
-    z-index: 4;
-
-    text-align:left;
-
-    height:450px;
-
-    margin-left: 400px;
-
-
-
-}
-.buttons a{
-    /* ここで改行される */
-    inline-block;
-    display: block;
-
-    position: relative;
-
-    /* ここで中央寄せ */
-    margin: 0 auto;
-
-    width: 30%;
-    max-width: 400px;
-    min-width: 200px;
-    padding-top: 20px;
-    margin-right: 500px;
-
-
-}
-.buttons img{
-    display: block;
-
-    width: 100%;
-    max-width: 400px;
-    min-width: 200px;
-
-    /*border-radius: 10px;*/
-}
-
 	</style>
 </head>
 <body>
-	<div class="buttons">
-       <img src="./image/ken.jpg"/><br>
-       <img src="./image/yumi.jpg"/>
-       <img src="./image/yari.jpg"/>
-       <img src="./image/uma.jpg"/>
-       <img src="./image/asasin.jpg"/>
-       <img src="./image/tue.jpg"/>
-       <img src="./image/basaka.jpg"/>
-       <img src="./image/seijo.jpg"/>
-       <img src="./image/ave.jpg"/>
-       <img src="./image/tate.jpg"/>
-</div>
+
 	<div id="header">
 	 	<div id="pr">
 		</div>
@@ -161,7 +102,11 @@
 					</td>
 				</tr>
 
-
+				<tr>
+					<td>
+						<img src='<s:property value="image_file_name"/>'/>
+					</td>
+				</tr>
 
 				<tr>
 					<td>
@@ -207,11 +152,12 @@
 					</s:else>
 					</td>
 				</tr>
-				<tr>
+
+
 					<td>
 						<br>
 					</td>
-				</tr>
+
 				</s:iterator>
 				<tr>
 
@@ -233,7 +179,7 @@
 			</table>
 		</s:form>
 
-			<div>
+			<div><br>
 				<p>前画面に戻る場合は<a href='<s:url action="GoHomeAction" />'>こちら</a></p>
 				<p>マイぺージは<a href='<s:url action="MyPageAction" />'>こちら</a></p>
 			</div>
